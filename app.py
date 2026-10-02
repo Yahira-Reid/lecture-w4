@@ -14,10 +14,9 @@ app = FastAPI()
 
 
 class Device(BaseModel):
-    name: str
-    room: str
-    temp: float
-    online: bool
+    mac: str
+    name: str | None = None
+    room: str | None = None
 
 
 @app.get("/devices")
